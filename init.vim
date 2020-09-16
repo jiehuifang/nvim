@@ -13,7 +13,6 @@ set cursorline
 set wrap
 set scrolloff=5
 set autoindent
-set tabstop=4
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -42,6 +41,11 @@ set smartcase
 "=== mouse setting
 "===
 set mouse=a
+
+"===
+"=== clipboard setting
+"===
+set clipboard+=unnamedplus
 
 "===
 "=== how to display space or tab
@@ -96,6 +100,15 @@ map sj :set splitbelow<CR>:split<CR>
 
 " map my placehold
 map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
+
+"===
+"=== python setting
+"===
+if has('python')
+  set pyx=2
+elseif has('python3')
+  set pyx=3
+endif
 
 "===
 "=== plugin setting
@@ -238,3 +251,7 @@ augroup mygroup
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
+
+" coc-snippets
+let g:snips_author = 'fangjiehui'
+let g:coc_snippet_next = '<tab>'
