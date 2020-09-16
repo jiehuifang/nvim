@@ -254,4 +254,5 @@ augroup end
 
 " coc-snippets
 let g:snips_author = 'fangjiehui'
-let g:coc_snippet_next = '<tab>'
+let g:coc_snippet_prev = '<c-b>'
+let g:coc_snippet_next = '<c-m>'
