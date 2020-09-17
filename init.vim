@@ -124,6 +124,12 @@ Plug 'vim-airline/vim-airline'
 " gruvbox theme
 Plug 'morhetz/gruvbox'
 
+" a vim plugin which shows a git diff in the sign column
+Plug 'airblade/vim-gitgutter'
+
+" an efficient fuzzy finder
+Plug 'Yggdroot/LeaderF'
+
 call plug#end()
 
 " exec theme
@@ -256,3 +262,8 @@ augroup end
 let g:snips_author = 'fangjiehui'
 let g:coc_snippet_prev = '<c-b>'
 let g:coc_snippet_next = '<c-m>'
+
+" ===
+" === Leaderf setting
+" ===
+noremap <silent> <C-p> :Leaderf file<CR>
