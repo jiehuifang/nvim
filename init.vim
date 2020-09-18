@@ -80,7 +80,7 @@ let mapleader=" "
 
 " map tabe
 map <LEADER>u :tabe<CR>
-map <LEADER>v :-tabnext<CR>
+map <LEADER>b :-tabnext<CR>
 map <LEADER>n :+tabnext<CR>
 " map control split enable
 map <LEADER>h <C-w>h
@@ -104,11 +104,7 @@ map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 "===
 "=== python setting
 "===
-if has('python')
-  set pyx=2
-elseif has('python3')
-  set pyx=3
-endif
+set pyx=3
 
 "===
 "=== plugin setting
@@ -120,21 +116,27 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " airline
 Plug 'vim-airline/vim-airline'
-
-" gruvbox theme
-Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline-themes'
 
 " a vim plugin which shows a git diff in the sign column
 Plug 'airblade/vim-gitgutter'
 
-" an efficient fuzzy finder
-Plug 'Yggdroot/LeaderF'
+" show the list of buffers in the command bar
+Plug 'bling/vim-bufferline'
+
+" icons
+Plug 'ryanoasis/vim-devicons'
+
+" vim theme
+Plug 'morhetz/gruvbox'
+
+" auto pair ()
+Plug 'jiangmiao/auto-pairs'
+
+" Code Comment
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
-
-" exec theme
-let g:gruvbox_contrast_dark='soft'
-autocmd vimenter * colorscheme gruvbox
 
 "===
 "=== coc setting
@@ -264,6 +266,17 @@ let g:coc_snippet_prev = '<c-b>'
 let g:coc_snippet_next = '<c-m>'
 
 " ===
-" === Leaderf setting
+" === vim theme
 " ===
-noremap <silent> <C-p> :Leaderf file<CR>
+let g:gruvbox_contrast_dark='soft'
+autocmd vimenter * colorscheme gruvbox
+
+" ===
+" === airline settings
+" ===
+" Always show status
+set laststatus=2
+" support powerline
+let g:airline_powerline_fonts = 1
+" display tab & buffer
+let g:airline#extensions#tabline#enabled = 1
