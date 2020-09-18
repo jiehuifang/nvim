@@ -136,6 +136,12 @@ Plug 'jiangmiao/auto-pairs'
 " Code Comment
 Plug 'preservim/nerdcommenter'
 
+" git plugin
+Plug 'tpope/vim-fugitive'
+
+" leaderF finder
+Plug 'Yggdroot/LeaderF'
+
 call plug#end()
 
 "===
@@ -143,32 +149,32 @@ call plug#end()
 "===
 " coc extensions
 let g:coc_global_extensions = [
-	\ 'coc-actions',
-	\ 'coc-css',
-	\ 'coc-diagnostic',
-	\ 'coc-explorer',
-	\ 'coc-flutter-tools',
-	\ 'coc-gitignore',
-	\ 'coc-html',
-	\ 'coc-json',
-	\ 'coc-java',
-	\ 'coc-lists',
-	\ 'coc-prettier',
-	\ 'coc-pyright',
-	\ 'coc-python',
-	\ 'coc-snippets',
-	\ 'coc-sourcekit',
-	\ 'coc-stylelint',
-	\ 'coc-syntax',
-	\ 'coc-tasks',
-	\ 'coc-todolist',
-	\ 'coc-translator',
-	\ 'coc-tslint-plugin',
-	\ 'coc-tsserver',
-	\ 'coc-vimlsp',
-	\ 'coc-vetur',
-	\ 'coc-yaml',
-	\ 'coc-yank']
+    \ 'coc-actions',
+    \ 'coc-css',
+    \ 'coc-diagnostic',
+    \ 'coc-explorer',
+    \ 'coc-flutter-tools',
+    \ 'coc-gitignore',
+    \ 'coc-html',
+    \ 'coc-json',
+    \ 'coc-java',
+    \ 'coc-lists',
+    \ 'coc-prettier',
+    \ 'coc-pyright',
+    \ 'coc-python',
+    \ 'coc-snippets',
+    \ 'coc-sourcekit',
+    \ 'coc-stylelint',
+    \ 'coc-syntax',
+    \ 'coc-tasks',
+    \ 'coc-todolist',
+    \ 'coc-translator',
+    \ 'coc-tslint-plugin',
+    \ 'coc-tsserver',
+    \ 'coc-vimlsp',
+    \ 'coc-vetur',
+    \ 'coc-yaml',
+    \ 'coc-yank']
 
 " Use tab for trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>
@@ -280,3 +286,12 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 " display tab & buffer
 let g:airline#extensions#tabline#enabled = 1
+
+" ===
+" === leaderF settings
+" ===
+noremap <c-p> :Leaderf file<CR>
+let g:Lf_WorkingDirectoryMode = 'a'
+let g:Lf_GtagsAutoGenerate = 1
+let g:Lf_Gtagslabel = 'native-pygments'
+let g:Lf_ShowHidden = 1
