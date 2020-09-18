@@ -124,7 +124,7 @@ Plug 'airblade/vim-gitgutter'
 " show the list of buffers in the command bar
 Plug 'bling/vim-bufferline'
 
-" icons
+" icons (need install Nerd Font compatible font)
 Plug 'ryanoasis/vim-devicons'
 
 " vim theme
@@ -275,6 +275,7 @@ let g:coc_snippet_next = '<c-m>'
 " === vim theme
 " ===
 let g:gruvbox_contrast_dark='soft'
+set background=dark
 autocmd vimenter * colorscheme gruvbox
 
 " ===
