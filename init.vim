@@ -139,7 +139,7 @@ Plug 'preservim/nerdcommenter'
 " git plugin
 Plug 'tpope/vim-fugitive'
 
-" leaderF finder
+" leaderF finder (need install gtags, ripgrep)
 Plug 'Yggdroot/LeaderF'
 
 call plug#end()
@@ -276,6 +276,7 @@ let g:coc_snippet_next = '<c-m>'
 " ===
 let g:gruvbox_contrast_dark='soft'
 set background=dark
+set termguicolors
 autocmd vimenter * colorscheme gruvbox
 
 " ===
@@ -292,7 +293,8 @@ let g:airline#extensions#tabline#enabled = 1
 " === leaderF settings
 " ===
 noremap <c-p> :Leaderf file<CR>
+noremap <LEADER>f :Leaderf rg -e
 let g:Lf_WorkingDirectoryMode = 'a'
-let g:Lf_GtagsAutoGenerate = 1
+let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
 let g:Lf_ShowHidden = 1
