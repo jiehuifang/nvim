@@ -19,6 +19,7 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+" check spell
 " set spell spelllang=en_us
 
 "===
@@ -60,7 +61,7 @@ syntax enable
 syntax on
 
 "===
-"=== other setting
+"=== change dir setting
 "===
 set autochdir
 
@@ -82,16 +83,19 @@ let mapleader=" "
 map <LEADER>u :tabe<CR>
 map <LEADER>b :-tabnext<CR>
 map <LEADER>n :+tabnext<CR>
+
 " map control split enable
 map <LEADER>h <C-w>h
 map <LEADER>j <C-w>j
 map <LEADER>k <C-w>k
 map <LEADER>l <C-w>l
+
 " map control split size
 map <LEADER><up> :res-5<CR>
 map <LEADER><down> :res+5<CR>
 map <LEADER><left> :vertical resize-5<CR>
 map <LEADER><right> :vertical resize+5<CR>
+
 " map create split
 map sl :set splitright<CR>:vsplit<CR>
 map sh :set nosplitright<CR>:vsplit<CR>
@@ -114,7 +118,7 @@ call plug#begin('~/.vim/plugged')
 " coc-nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" airline
+" airline plugin
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -128,7 +132,7 @@ Plug 'bling/vim-bufferline'
 Plug 'ryanoasis/vim-devicons'
 
 " vim theme
-Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 
 " auto pair ()
 Plug 'jiangmiao/auto-pairs'
@@ -274,10 +278,8 @@ let g:coc_snippet_next = '<c-m>'
 " ===
 " === vim theme
 " ===
-let g:gruvbox_contrast_dark='soft'
 set background=dark
-set termguicolors
-autocmd vimenter * colorscheme gruvbox
+colorscheme PaperColor
 
 " ===
 " === airline settings
@@ -288,6 +290,8 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 " display tab & buffer
 let g:airline#extensions#tabline#enabled = 1
+" airline theme
+let g:airline_theme='onedark'
 
 " ===
 " === leaderF settings
