@@ -275,6 +275,14 @@ let g:snips_author = 'fangjiehui'
 let g:coc_snippet_prev = '<c-b>'
 let g:coc_snippet_next = '<c-m>'
 
+" loading special coc-settings
+if has('unix')
+    let g:coc_config_home='$MYNVIM/unix/'
+elseif has('win32')
+    let g:coc_config_home='F:\\repo\\nvim\\win32\\'
+else
+endif
+
 " ===
 " === vim theme
 " ===
