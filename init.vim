@@ -110,11 +110,6 @@ map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 "===
 set pyx=3
 
-" ===
-" === terminal settings
-" ===
-"set termguicolors
-
 "===
 "=== plugin setting
 "===
@@ -125,7 +120,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " airline plugin
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " a vim plugin which shows a git diff in the sign column
 Plug 'airblade/vim-gitgutter'
@@ -137,7 +131,7 @@ Plug 'bling/vim-bufferline'
 Plug 'ryanoasis/vim-devicons'
 
 " vim theme
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 " auto pair ()
 Plug 'jiangmiao/auto-pairs'
@@ -282,17 +276,18 @@ let g:coc_snippet_next = '<c-m>'
 
 " loading special coc-settings
 if has('unix')
-    let g:coc_config_home='$MYNVIM/unix/'
+    let g:coc_config_home='$MY_NVIM_CONFIG/unix/'
 elseif has('win32')
-    let g:coc_config_home='F:\nvim\\win32\\'
+    let g:coc_config_home='$MY_NVIM_CONFIG\\win32\\'
 else
 endif
 
 " ===
 " === vim theme
 " ===
+let g:gruvbox_contrast_dark='soft'
 set background=dark
-colorscheme PaperColor
+colorscheme gruvbox
 
 " ===
 " === airline settings
@@ -303,8 +298,6 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 " display tab & buffer
 let g:airline#extensions#tabline#enabled = 1
-" airline theme
-let g:airline_theme='onedark'
 
 " ===
 " === leaderF settings
