@@ -110,6 +110,11 @@ map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 "===
 set pyx=3
 
+" ===
+" === terminal settings
+" ===
+"set termguicolors
+
 "===
 "=== plugin setting
 "===
@@ -279,7 +284,7 @@ let g:coc_snippet_next = '<c-m>'
 if has('unix')
     let g:coc_config_home='$MYNVIM/unix/'
 elseif has('win32')
-    let g:coc_config_home='F:\\repo\\nvim\\win32\\'
+    let g:coc_config_home='F:\nvim\\win32\\'
 else
 endif
 
