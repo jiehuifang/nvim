@@ -108,7 +108,14 @@ map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 "===
 "=== python setting
 "===
-set pyx=3
+if has("python3")
+    set pyx=3
+elseif has("python2")
+    set pyx=2
+else
+    " default set python3
+    set pyx=3
+endif
 
 "===
 "=== plugin setting
