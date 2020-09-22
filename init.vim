@@ -295,6 +295,8 @@ endif
 let g:gruvbox_contrast_dark='soft'
 set background=dark
 colorscheme gruvbox
+" set background none
+"hi Normal ctermbg=none
 
 " ===
 " === airline settings
