@@ -265,8 +265,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>ff  <Plug>(coc-format-selected)
+nmap <leader>ff  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -278,8 +278,6 @@ augroup end
 
 " coc-snippets
 let g:snips_author = 'fangjiehui'
-let g:coc_snippet_prev = '<c-b>'
-let g:coc_snippet_next = '<c-m>'
 
 " loading special coc-settings
 if has('unix')
