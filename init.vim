@@ -105,6 +105,15 @@ map sj :set splitbelow<CR>:split<CR>
 " map my placehold
 map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
+" map term settings
+map <c-t> <Esc>sl<CR>:term <CR>i
+tnoremap <Esc> <c-\><c-n>
+
+" map write file
+map W :w<CR>
+" map quit file
+map Q :q<CR>
+
 "===
 "=== python setting
 "===
