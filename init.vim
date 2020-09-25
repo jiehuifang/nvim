@@ -173,6 +173,7 @@ let g:coc_global_extensions = [
     \ 'coc-diagnostic',
     \ 'coc-explorer',
     \ 'coc-flutter-tools',
+    \ 'coc-git',
     \ 'coc-gitignore',
     \ 'coc-html',
     \ 'coc-json',
