@@ -109,11 +109,6 @@ map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 map <c-t> <Esc>sl<CR>:term <CR>i
 tnoremap <Esc> <c-\><c-n>
 
-" map write file
-map W :w<CR>
-" map quit file
-map Q :q<CR>
-
 "===
 "=== python setting
 "===
@@ -161,6 +156,9 @@ Plug 'tpope/vim-fugitive'
 " leaderF finder (need install gtags, ripgrep)
 Plug 'Yggdroot/LeaderF'
 
+" debugger
+Plug 'puremourning/vimspector',{'do':'./install_gadget.py --force-enable-java'}
+
 call plug#end()
 
 "===
@@ -178,6 +176,7 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-json',
     \ 'coc-java',
+    \ 'coc-java-debug',
     \ 'coc-lists',
     \ 'coc-prettier',
     \ 'coc-pyright',
@@ -297,6 +296,9 @@ elseif has('win32')
 else
 endif
 
+" java-debug mapping
+nmap <F1> :CocCommand java.debug.vimspector.start<CR>
+
 " ===
 " === vim theme
 " ===
@@ -325,3 +327,10 @@ let g:Lf_WorkingDirectoryMode = 'a'
 let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
 let g:Lf_ShowHidden = 1
+
+" ===
+" === vimspector settings
+" ===
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <F2> :VimspectorReset<CR>
+sign define vimspectorPC text=👉 texthl=SpellBad
