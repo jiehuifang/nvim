@@ -315,8 +315,6 @@ colorscheme gruvbox
 set laststatus=2
 " support powerline
 let g:airline_powerline_fonts = 1
-" display tab & buffer
-let g:airline#extensions#tabline#enabled = 1
 
 " ===
 " === leaderF settings
@@ -333,4 +331,3 @@ let g:Lf_ShowHidden = 1
 " ===
 let g:vimspector_enable_mappings = 'HUMAN'
 nmap <F2> :VimspectorReset<CR>
-sign define vimspectorPC text=👉 texthl=SpellBad
