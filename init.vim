@@ -325,6 +325,8 @@ let g:Lf_WorkingDirectoryMode = 'a'
 let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
 let g:Lf_ShowHidden = 1
+let g:Lf_UseMemoryCache = 0
+let g:Lf_UseCache = 0
 
 " ===
 " === vimspector settings
