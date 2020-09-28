@@ -135,9 +135,6 @@ Plug 'vim-airline/vim-airline'
 " a vim plugin which shows a git diff in the sign column
 Plug 'airblade/vim-gitgutter'
 
-" show the list of buffers in the command bar
-Plug 'bling/vim-bufferline'
-
 " icons (need install Nerd Font compatible font)
 Plug 'ryanoasis/vim-devicons'
 
