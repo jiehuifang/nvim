@@ -133,6 +133,14 @@ function! CompileAndRun()
         silent! exec "!javac %"
         exec "!java %<"
         silent! call ClearCompileOutputFile('*.class')
+    elseif &filetype == 'python'
+        if has("python3")
+            exec "!python3 %"
+        elseif has("python2")
+            exec "!python2 %"
+        else
+            exec "!python %"
+        endif
     endif
 endfunction
 
