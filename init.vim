@@ -127,14 +127,13 @@ endif
 " ===
 " === compile & run demo
 " ===
-noremap <LEADER>r :call CompileRun()<CR>
-function! CompileRun()
-    
+noremap <LEADER>r :call CompileAndRun()<CR>
+function! CompileAndRun()
     if &filetype == 'java'
         silent! exec "!javac %"
         exec "!java %<"
+        silent! call ClearCompileOutputFile('*.class')
     endif
-    silent! call ClearCompileOutputFile()
 endfunction
 
 function! ClearCompileOutputFile(file)
