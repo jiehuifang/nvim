@@ -9,7 +9,7 @@ set nocompatible
 set encoding=utf-8
 set number
 set relativenumber
-set cursorline
+"set cursorline
 set wrap
 set scrolloff=5
 set autoindent
@@ -314,8 +314,6 @@ hi Normal ctermbg=none
 " ===
 " === airline settings
 " ===
-" Always show status
-set laststatus=2
 " support powerline
 let g:airline_powerline_fonts = 1
 
