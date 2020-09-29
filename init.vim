@@ -124,6 +124,22 @@ else
     set pyx=3
 endif
 
+" ===
+" === compile & run demo
+" ===
+function! CompileRun()
+    if &filetype == 'java'
+        silent! exec "!javac %"
+        exec "!time java %<"
+        if has('unix')
+            silent! exec "!rm -rf *.class"
+        elseif has('win32')
+            silent! exec "!del *.class"
+        else
+    endif
+    endif
+endfunction
+
 "===
 "=== plugin setting
 "===
