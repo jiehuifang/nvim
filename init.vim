@@ -127,16 +127,21 @@ endif
 " ===
 " === compile & run demo
 " ===
+noremap <LEADER>r :call CompileRun()<CR>
 function! CompileRun()
+    
     if &filetype == 'java'
         silent! exec "!javac %"
-        exec "!time java %<"
-        if has('unix')
-            silent! exec "!rm -rf *.class"
-        elseif has('win32')
-            silent! exec "!del *.class"
-        else
+        exec "!java %<"
     endif
+    silent! call ClearCompileOutputFile()
+endfunction
+
+function! ClearCompileOutputFile(file)
+    if has('unix')
+        silent! exec "!rm -rf ".a:file
+    elseif has('win32')
+        silent! exec "!del ".a:file
     endif
 endfunction
 
