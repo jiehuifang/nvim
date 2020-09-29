@@ -320,8 +320,12 @@ let g:airline_powerline_fonts = 1
 " ===
 " === leaderF settings
 " ===
-noremap <c-p> :Leaderf file<CR>
+noremap <c-p> :Leaderf file --popup<CR>
 noremap <LEADER>f :Leaderf rg -e
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PopupWidth = 0.8
+let g:Lf_PopupHeight = 0.8
+let g:Lf_PreviewInPopup = 1
 let g:Lf_WorkingDirectoryMode = 'a'
 let g:Lf_GtagsAutoGenerate = 0
 let g:Lf_Gtagslabel = 'native-pygments'
