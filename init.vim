@@ -239,7 +239,7 @@ nmap <space>e :CocCommand explorer<CR>
 set hidden
 
 " Give more space for displaying messages.
-set cmdheight=2
+"set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
