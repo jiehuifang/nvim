@@ -105,6 +105,9 @@ map sj :set splitbelow<CR>:split<CR>
 " map my placehold
 map <LEADER><LEADER> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
+" map no highlight search result
+map <LEADER><CR> <Esc>:nohlsearch<CR>
+
 " map term settings
 map <c-t> <Esc>sl<CR>:term <CR>i
 tnoremap <Esc> <c-\><c-n>
@@ -306,7 +309,7 @@ let g:gruvbox_contrast_dark='soft'
 set background=dark
 colorscheme gruvbox
 " set background none
-"hi Normal ctermbg=none
+hi Normal ctermbg=none
 
 " ===
 " === airline settings
