@@ -135,11 +135,17 @@ function! CompileAndRun()
         silent! call ClearCompileOutputFile('*.class')
     elseif &filetype == 'python'
         if has("python3")
-            exec "!python3 %"
+            if has('unix')
+                exec "!python3 %"
+            elseif has('win32')
+                exec "!python %"
+            endif
         elseif has("python2")
-            exec "!python2 %"
-        else
-            exec "!python %"
+            if has('unix')
+                exec "!python2 %"
+            elseif has('win32')
+                exec "!python %"
+            endif
         endif
     endif
 endfunction
