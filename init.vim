@@ -339,7 +339,7 @@ nmap <F1> :CocCommand java.debug.vimspector.start<CR>
 " ===
 " === vim theme
 " ===
-let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_contrast_dark='medium'
 set background=dark
 colorscheme gruvbox
 " set background none
