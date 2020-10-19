@@ -9,7 +9,8 @@ set nocompatible
 set encoding=utf-8
 set number
 set relativenumber
-"set cursorline
+set cursorline
+set cursorcolumn
 set wrap
 set scrolloff=5
 set autoindent
